@@ -34,8 +34,6 @@ export class ScoreController {
 
   @Get()
   async getScores(@Res() res) {
-    console.log('etramos en el getScores');
-    console.log('getScores');
     const scores = await this.scoreService.getScores();
     return res.status(HttpStatus.OK).json(scores);
   }
